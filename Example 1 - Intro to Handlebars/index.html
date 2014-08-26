@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Template</title>
+</head>
+<body>
+  <ul class="people">
+
+    <script id="template" type="text/x-handlebars-template">
+    {{#each items}}
+    <li>
+
+      {{#if name.first}}
+        <h2>{{fullName name}}</h2>
+      {{else}}
+        <h2>{{name}}</h2>
+      {{/if}}
+
+      <p>
+        {{job}}
+      </p>
+
+      <p>
+         {{#if age}}
+            {{{age}}}
+         {{/if}}
+      </p>
+      <p>
+        {{#unless age}}
+          <h4>{{name}} does not have an age</h4>
+        {{/unless}}
+      </p>
+    </li>
+    {{/each}}
+    </script>
+  </ul>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src ="handlebars.js"></script>
+<script src = "data.json"></script>
+
+<script>
+
+$(document).ready(function(){
+
+   Handlebars.registerHelper('fullName', function(name){
+    return name.first + ' ' + name.last;
+   });
+
+    // console.log(data);
+
+
+   var template = Handlebars.compile($("#template").html());
+
+   var temp = template(data);
+
+   $(document.body).append(temp);
+ });
+</script>
+</body>
+</html>

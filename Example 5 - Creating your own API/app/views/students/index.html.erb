@@ -1,0 +1,24 @@
+<h1>Student List</h1>
+
+<% @student.each do |student| %>
+	<p>
+		Name: <%= student.name %>,
+		Age: <%= student.age %>
+	</p>
+
+	<p>
+		<%= link_to 'Show', student_path(student) %> |
+		<%= link_to 'Edit', edit_student_path(student), id: "update" %> |
+		<%= link_to "Delete", student, method: :delete, data: {:confirm =>"You sure you want to do that?"} %>
+	</p>
+
+<% end  %>
+
+<%= link_to 'New', new_student_path, id: "new" %>
+
+<%= link_to 'Hide form', new_student_path, id: "hideForm" %>
+
+<div class="newform">
+
+
+</div>

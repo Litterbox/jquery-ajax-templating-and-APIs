@@ -1,0 +1,18 @@
+<%= form_for @student do |f| %>
+	<p>
+		<%= label_tag ("name") %>
+		<%= f.text_field :name, id: "name" %>
+	</p>
+	<p>
+		<%= label_tag ("age") %>
+		<%= f.text_field :age, id: "age" %>
+	</p>
+	<p>
+		<%= label_tag ("Instructor") %>
+		<%= select_tag(:instructor_id, options_for_select(@instructor_data, params[:id]),
+		:id => 'instructor') %>
+	</p>
+	<p>
+		<%= submit_tag("Submit") %>
+	</p>
+<% end %>
