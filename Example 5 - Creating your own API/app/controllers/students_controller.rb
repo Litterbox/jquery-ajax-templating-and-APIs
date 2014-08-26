@@ -11,7 +11,6 @@ class StudentsController < ApplicationController
   end
 
   def create
-
     i = Instructor.find(params[:instructor_id])
     new_student = Student.create(student_params)
     i.students << new_student
@@ -30,6 +29,9 @@ class StudentsController < ApplicationController
 
   def show
     # @instructor_name = @student.instructor.name
+    # @student_hash = @student.attributes
+    # @student_hash["instructor"] = @student.instructor.attributes
+    # respond_with @student_hash
     respond_with @student.to_json(
       :include => {
         :instructor => {
