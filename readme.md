@@ -8,14 +8,7 @@ JSON data + Templating format -> Template Engine -> HTML
 
 Example of templating - Twitter!
 
-### Example 1 - templating with jQuery
-
-- Do a sample template with jquery using each
-
-- Why do we need templating
-	- our replace method is a bit janky, there are lots of things jQuery does well, but templating is not one of them - let's use a templating library to do this. We're going to be using handlebars.
-
-### Example 2 -  an intro to Handlebars
+### Example 1 -  an intro to Handlebars
 
 - show handlebars process
 	- create your template
@@ -25,17 +18,10 @@ Example of templating - Twitter!
 
 - Do everything in one js file and include dummy data
 
-### Example 3 -  simple intro to promises in jquery
+### Example 2 -  simple intro to promises in jquery
 - show how promises work
 
-### Example 4 -  introducing deferreds in jquery
-- show how deferreds work in jquery
-
-### Example 5 -  promises and deferreds with OMDB
-- show how deferreds work in jquery
-
-### Example 6 -  connecting Handlebars, Promises and OMDB to a Rails app
-- put everything other
+### Example 3 -  AJAX and OMDB 
 
 - gem install handlebars_assets
 - create a folder called `templates` in your javascripts file
@@ -49,6 +35,9 @@ Example of templating - Twitter!
 - back in your application.js, write a function to render the pre-compiled templates
 - rake assets:precompile
 
+### Example 4 -  Server side API calls using Typhoeus
+
+### Example 5 -  Creating your own API 
 
 ### Templating on the client side is expensive - good resource
 https://www.youtube.com/watch?v=ehP1vMq_BX8
